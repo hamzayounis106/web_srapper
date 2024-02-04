@@ -2,7 +2,7 @@
   "name": "scrapper_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hamzayounis106.github.io/web_scrapper",
+  "homepage": "https://hamzayounis106.github.io/web_srapper",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
