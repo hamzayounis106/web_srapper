@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+/* Import Ubuntu font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* Body Styling */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #1e1e1e; /* Dark background color */
+  color: #d4d4d4; /* Light text color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App Container */
+.app-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  padding: 20px;
+}
+
+/* Input Textarea */
+.input-textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #2d2d2d; /* Dark border color */
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #2d2d2d; /* Dark background color */
+  color: #d4d4d4; /* Light text color */
+}
+
+/* Action Button */
+.action-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  background-color: #4f4f4f; /* Darker disabled button color */
+  cursor: not-allowed;
+}
+
+/* Buttons in the same line */
+.app-container .action-button {
+  margin-right: 10px;
+}
+
+/* Result Container */
+.result-container {
+  margin-top: 20px;
+  align-self: flex-start; /* Align to the left */
+}
+
+/* URL Table Row */
+.url-tr {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* URL */
+.url {
+  flex: 1;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Phone Number */
+.phone-number {
+  flex: 1;
+  font-weight: bold;
+}
+
+/* Play Sounds Button */
+.action-button:last-child {
+  margin-top: 20px;
+}
+
+/* Dark Theme for Buttons */
+.action-button {
+  background-color: #007bff;
+}
+
+.action-button:hover {
+  background-color: #0056b3; /* Slightly darker color on hover */
+}
+
+.buttons_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.action-button:last-child {
+    margin-top: 0px;
 }
