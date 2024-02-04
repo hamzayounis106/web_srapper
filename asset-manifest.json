@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/web_scrapper/static/css/main.054c0711.css",
+    "main.js": "/web_scrapper/static/js/main.d1df89e9.js",
+    "index.html": "/web_scrapper/index.html",
+    "main.054c0711.css.map": "/web_scrapper/static/css/main.054c0711.css.map",
+    "main.d1df89e9.js.map": "/web_scrapper/static/js/main.d1df89e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.054c0711.css",
+    "static/js/main.d1df89e9.js"
+  ]
+}
