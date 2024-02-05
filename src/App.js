@@ -23,7 +23,7 @@ function App() {
       if (Array.isArray(response.data.data)) {
         setTableData(response.data.data);
         setExcelData(response.data.excelBase64);
-        playAudio();
+        // playAudio(); // Commented out - audio play
       } else {
         console.error("Error: The server response is not an array.");
       }
@@ -50,8 +50,7 @@ function App() {
   const handleCopyToClipboard = () => {
     const phoneNumbers = tableData.map((row) => row["Phone Number"]).join("\n");
     copy(phoneNumbers);
-    stopAudio();
- 
+    // stopAudio(); // Commented out - audio stop
   };
 
   const handleDownload = () => {
@@ -73,17 +72,17 @@ function App() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    stopAudio();
+    // stopAudio(); // Commented out - audio stop
   };
 
-  const playAudio = () => {
-    audioRef.current.play();
-  };
+  // const playAudio = () => {
+  //   audioRef.current.play(); // Commented out - audio play
+  // };
 
-  const stopAudio = () => {
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0;
-  };
+  // const stopAudio = () => {
+  //   audioRef.current.pause(); // Commented out - audio pause
+  //   audioRef.current.currentTime = 0;
+  // };
 
   return (
     <div className="app-container">
@@ -93,26 +92,26 @@ function App() {
         onChange={(e) => setUrls(e.target.value)}
       />
       <div className="buttons_div">
-      <button className="action-button" onClick={handleScrape} disabled={loading}>
-        {loading ? "Scraping..." : "Scrape URLs"}
-      </button>
-      <button className="action-button" onClick={handleDownload} disabled={!excelData}>
-        Download Excel
-      </button>
-      <button
-        className="action-button"
-        onClick={handleCopyToClipboard}
-        disabled={tableData.length === 0}
-      >
-        Copy to Clipboard
-      </button>
-      <button
-        className="action-button"
-        onClick={handleSortAndFilter}
-        disabled={tableData.length === 0}
-      >
-        Sort and Filter
-      </button>
+        <button className="action-button" onClick={handleScrape} disabled={loading}>
+          {loading ? "Scraping..." : "Scrape URLs"}
+        </button>
+        <button className="action-button" onClick={handleDownload} disabled={!excelData}>
+          Download Excel
+        </button>
+        <button
+          className="action-button"
+          onClick={handleCopyToClipboard}
+          disabled={tableData.length === 0}
+        >
+          Copy to Clipboard
+        </button>
+        <button
+          className="action-button"
+          onClick={handleSortAndFilter}
+          disabled={tableData.length === 0}
+        >
+          Sort and Filter
+        </button>
       </div>
 
       {showFirstDiv && (
@@ -126,7 +125,7 @@ function App() {
         </div>
       )}
 
-{!showFirstDiv && (
+      {!showFirstDiv && (
         <div className="result-container">
           {tableData.map((row, index) => (
             <div key={index}>
